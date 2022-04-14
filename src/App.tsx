@@ -1,7 +1,8 @@
+import OpeningHours from 'components/core/opening-hours/OpeningHours'
 import './App.scss'
 
 function App() {
-	return <span>Hi</span>
+	return <OpeningHours />
 }
 
 export default App

@@ -1,4 +1,14 @@
+@use '../assets/css/constants';
+@use '../assets/css/colors';
+
 html {
-	font-size: 16px;
 	font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, Open Sans, sans-serif;
+	font-size: constants.$base-font-size;
+	color: colors.$base-color-black;
+	background-color: colors.$base-color-light-grey;
+}
+
+:is(html, body, #root) {
+	height: 100%;
+	margin: 0;
 }
