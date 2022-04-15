@@ -1,0 +1,17 @@
+@use '../../../../assets/css/breakpoints.scss';
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.875rem;
+	margin-top: .3em;
+
+	@media (max-width: breakpoints.$breakpoint-tablet) {
+		font-size: 1.5rem;
+	}
+}
+
+.icon {
+	margin-right: .8rem;
+}
