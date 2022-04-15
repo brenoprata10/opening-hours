@@ -4,7 +4,7 @@ import styles from 'components/utils/title/Title.module.scss'
 const Title = ({label, icon}: {label: string; icon?: React.ReactNode}) => (
 	<div className={styles.wrapper}>
 		{icon && <div className={styles.icon}>{icon}</div>}
-		<b className={styles.title}>{label}</b>
+		<b>{label}</b>
 	</div>
 )
 
