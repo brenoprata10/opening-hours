@@ -1,4 +1,4 @@
-import OpeningHours from 'components/core/opening-hours/OpeningHours'
+import OpeningHours from 'components/opening-hours/OpeningHours'
 import './App.scss'
 
 function App() {

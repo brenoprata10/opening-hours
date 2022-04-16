@@ -1,10 +1,14 @@
 @use '../breakpoints.scss';
 @use '../constants.scss';
 
-@mixin responsive-title-font {
-	font-size: constants.$base-font-size-extra-large;
+@mixin responsive-font-size($defaultFontSize, $tabletFontSize) {
+	font-size: $defaultFontSize;
 
 	@media (max-width: breakpoints.$breakpoint-tablet) {
-		font-size: constants.$base-font-size-large;
+		font-size: $tabletFontSize;
 	}
+}
+
+@mixin responsive-title-font {
+	@include responsive-font-size(constants.$base-font-size-extra-large, constants.$base-font-size-large);
 }

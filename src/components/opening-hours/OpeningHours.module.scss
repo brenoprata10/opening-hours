@@ -1,6 +1,5 @@
-@use '../../../../assets/css/mixins/typography.scss';
-@use '../../../../assets/css/breakpoints.scss';
-
+@use '../../../assets/css/mixins/typography.scss';
+@use '../../../assets/css/breakpoints.scss';
 
 .wrapper {
 	height: 100%;
@@ -13,7 +12,7 @@
 .clock-icon {
 	$icon-size: .8em;
 	
-	background-image: url('../../../../assets/images/clock-icon.png');
+	background-image: url('../../../assets/images/clock-icon.png');
 	background-size: cover;
 	width: $icon-size;
 	height: $icon-size;
@@ -22,10 +21,15 @@
 
 .card {
 	width: 100%;
-	max-width: 20rem;
+	max-width: 21rem;
 
 	@media (max-width: breakpoints.$breakpoint-tablet) {
 		max-width: 16.2rem;
 		min-width: 12.375rem;
 	}
+}
+
+.weekdays-list {
+	display: flex;
+	flex-wrap: wrap;
 }

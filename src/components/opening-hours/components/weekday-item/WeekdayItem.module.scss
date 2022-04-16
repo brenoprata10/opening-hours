@@ -1,0 +1,10 @@
+@use '../../../../../assets/css/colors.scss';
+@use '../../../../../assets/css/mixins/typography.scss';
+
+.wrapper {
+	@include typography.responsive-font-size(1.375rem, 1rem);
+	padding: .5em 0;
+	font-weight: 500;
+	width: 100%;
+	border-bottom: .1rem solid colors.$base-color-grey;
+}
