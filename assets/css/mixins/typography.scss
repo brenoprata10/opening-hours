@@ -1,5 +1,5 @@
-@use '../breakpoints.scss';
-@use '../constants.scss';
+@use '../breakpoints';
+@use '../constants';
 
 @mixin responsive-font-size($defaultFontSize, $tabletFontSize) {
 	font-size: $defaultFontSize;

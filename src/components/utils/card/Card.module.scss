@@ -1,14 +1,15 @@
 @use '../../../../assets/css/colors';
+@use '../../../../assets/css/mixins/responsive';
 
 .card {
 	$card-shadow-color: colors.$base-color-grey;
 
 	margin: 2rem;
-	padding: 1.5rem;
 	border-radius: .63rem;
 	filter: drop-shadow(0 0.2rem 0.2rem darken($card-shadow-color, 5));
 	outline: 0.1rem solid $card-shadow-color;
 	background-color: colors.$base-color-white;
+	@include responsive.responsive-property('padding', 2.6rem, 1.9rem);
 }
 
 .header {

@@ -1,0 +1,9 @@
+@use '../breakpoints';
+
+@mixin responsive-property($property, $defaultValue, $tabletValue) {
+	#{$property}: $defaultValue;
+
+	@media (max-width: breakpoints.$breakpoint-tablet) {
+		#{$property}: $tabletValue;
+	}
+}

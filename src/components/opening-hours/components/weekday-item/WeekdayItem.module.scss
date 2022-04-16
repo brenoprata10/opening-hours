@@ -3,7 +3,7 @@
 
 .wrapper {
 	@include typography.responsive-font-size(1.375rem, 1rem);
-	padding: .5em 0;
+	padding: .45em 0;
 	font-weight: 500;
 	width: 100%;
 	border-bottom: .1rem solid colors.$base-color-grey;
