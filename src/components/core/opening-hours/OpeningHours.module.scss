@@ -1,3 +1,7 @@
+@use '../../../../assets/css/mixins/typography.scss';
+@use '../../../../assets/css/breakpoints.scss';
+
+
 .wrapper {
 	height: 100%;
 	width: 100%;
@@ -7,10 +11,22 @@
 }
 
 .clock-icon {
-	$icon-size: 1.5rem;
-
+	$icon-size: .8em;
+	
 	background-image: url('../../../../assets/images/clock-icon.png');
 	background-size: cover;
 	width: $icon-size;
 	height: $icon-size;
+	@include typography.responsive-title-font
+}
+
+.card {
+	//width: clamp(12.375rem, 100%, 16.2rem);
+	width: 100%;
+	max-width: 18rem;
+
+	@media (max-width: breakpoints.$breakpoint-tablet) {
+		max-width: 16.2rem;
+		min-width: 12.375rem;
+	}
 }
