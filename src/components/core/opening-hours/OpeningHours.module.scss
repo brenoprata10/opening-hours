@@ -21,9 +21,8 @@
 }
 
 .card {
-	//width: clamp(12.375rem, 100%, 16.2rem);
 	width: 100%;
-	max-width: 18rem;
+	max-width: 20rem;
 
 	@media (max-width: breakpoints.$breakpoint-tablet) {
 		max-width: 16.2rem;
