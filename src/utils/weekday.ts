@@ -29,3 +29,10 @@ export const getWeekdayList = ({start}: {start?: EWeekday} = {}) => {
 		  })
 		: weekdayList
 }
+
+export const getNextWeekday = (weekday: EWeekday): EWeekday => {
+	const weekdayList = getWeekdayList()
+	const weekdayIndex = weekdayList.indexOf(weekday)
+
+	return weekday === EWeekday.SATURDAY ? EWeekday.SUNDAY : weekdayList[weekdayIndex + 1]
+}

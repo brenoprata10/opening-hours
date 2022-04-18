@@ -4,9 +4,9 @@ import WeekdayItem from 'components/opening-hours/components/weekday-item/Weekda
 import {useEffect, useState} from 'react'
 import TMerchantWeekOperation from 'types/TMerchantWeekOperation'
 import {fetchOpeningHours} from 'api/merchant'
-import EHourOperationType from 'enums/EHourOperation'
 import {getCurrentWeekday, getWeekdayList} from 'utils/weekday'
 import EWeekday from 'enums/EWeekday'
+import {getOpeningHoursWithMappedClosingTime} from 'components/opening-hours/utils/opening-hours'
 
 const START_WEEKDAY = EWeekday.MONDAY
 
@@ -24,6 +24,10 @@ const OpeningHours = () => {
 		void loadOpeningHours()
 	}, [])
 
+	if (!openingHours) {
+		return null
+	}
+
 	return (
 		<div className={styles.wrapper}>
 			<Card className={styles.card} title={'Opening hours'} headerLeading={<div className={styles['clock-icon']} />}>
@@ -33,9 +37,7 @@ const OpeningHours = () => {
 							key={`${weekday}-item`}
 							weekday={weekday}
 							displayTodayTag={currentWeekday === weekday}
-							isClosed={openingHours?.[weekday].every(
-								(hourOperation) => hourOperation.type !== EHourOperationType.OPEN
-							)}
+							openingDayHours={getOpeningHoursWithMappedClosingTime({openingHours, weekday})}
 						/>
 					))}
 				</div>
