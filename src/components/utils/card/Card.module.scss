@@ -16,8 +16,8 @@
 	display: flex;
 	align-items: center;
 	margin-top: .3em;
-	padding-bottom: .9rem;
-	border-bottom: 0.1rem solid colors.$base-color-black;
+	border-bottom: 0.114rem solid colors.$base-color-black;
+	@include responsive.responsive-property('padding-bottom', .85rem, .60rem);
 
 	&-leading {
 		margin-right: .8rem;
