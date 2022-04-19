@@ -4,7 +4,7 @@ import WeekdayItem from 'components/opening-hours/components/weekday-item/Weekda
 import {useEffect, useState} from 'react'
 import TMerchantWeekOperation from 'types/TMerchantWeekOperation'
 import {fetchOpeningHours} from 'api/merchant'
-import {getCurrentWeekday, getWeekdayList} from 'utils/weekday'
+import {getWeekdayList} from 'utils/weekday'
 import EWeekday from 'enums/EWeekday'
 import {getOpeningHoursWithMappedClosingTime} from 'components/opening-hours/utils/opening-hours'
 
@@ -12,7 +12,6 @@ const START_WEEKDAY = EWeekday.MONDAY
 
 const OpeningHours = () => {
 	const [openingHours, setOpeningHours] = useState<TMerchantWeekOperation | undefined>()
-	const currentWeekday = getCurrentWeekday()
 	const weekdayList = getWeekdayList({start: START_WEEKDAY})
 
 	useEffect(() => {
@@ -36,7 +35,6 @@ const OpeningHours = () => {
 						<WeekdayItem
 							key={`${weekday}-item`}
 							weekday={weekday}
-							displayTodayTag={currentWeekday === weekday}
 							openingDayHours={getOpeningHoursWithMappedClosingTime({openingHours, weekday})}
 						/>
 					))}

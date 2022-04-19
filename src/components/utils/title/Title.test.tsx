@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react'
-import Title from './Title'
+import Title from 'components/utils/title/Title'
 
 test('Check Title Props', () => {
 	const title = 'Jest testing title'

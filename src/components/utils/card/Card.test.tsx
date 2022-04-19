@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react'
-import Card from './Card'
+import Card from 'components/utils/card/Card'
 
 test('Check Card Props', () => {
 	const title = 'Testing'
