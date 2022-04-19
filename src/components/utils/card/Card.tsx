@@ -13,14 +13,14 @@ const Card = ({
 	headerLeading?: React.ReactNode
 	className?: string
 }) => (
-	<div className={`${styles.card} ${className ?? ''}`}>
+	<div className={`${styles.card} ${className ?? ''}`} data-testid='card'>
 		{title && (
-			<div className={styles.header}>
-				<div className={styles['header-leading']}>{headerLeading}</div>
-				<Title label={'Opening hours'} />
+			<div className={styles.header} data-testid='card-header'>
+				<div className={styles['header-leading']} data-testid='card-header-leading'>{headerLeading}</div>
+				<Title label={title} />
 			</div>
 		)}
-		{children}
+		<div data-testid='card-content'>{children}</div>
 	</div>
 )
 export default Card
