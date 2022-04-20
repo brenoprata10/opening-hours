@@ -14,16 +14,17 @@
 .weekday {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 
 	&-label {
 		text-transform: capitalize;
 		font-weight: 500;
+		margin-right: 0.65em;
 	}
 }
 
 .today-tag {
 	color: colors.$base-color-green;
-	margin-left: 0.9em;
 	@include typography.responsive-font-size(1rem, 0.75rem);
 }
 
@@ -32,8 +33,10 @@
 }
 
 .opening-hour {
-	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
+	white-space: nowrap;
+	width: min-content;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: end;
 	margin-left: 0.3em;
 }
