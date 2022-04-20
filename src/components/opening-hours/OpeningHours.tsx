@@ -28,7 +28,7 @@ const OpeningHours = () => {
 	}
 
 	return (
-		<div className={styles.wrapper}>
+		<div className={styles.wrapper} data-testid={'opening-hours'}>
 			<Card className={styles.card} title={'Opening hours'} headerLeading={<div className={styles['clock-icon']} />}>
 				<div className={styles['weekdays-list']}>
 					{weekdayList.map((weekday) => (
