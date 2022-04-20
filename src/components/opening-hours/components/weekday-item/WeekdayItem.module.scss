@@ -15,6 +15,7 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	flex: 1;
 
 	&-label {
 		text-transform: capitalize;
@@ -25,6 +26,7 @@
 
 .today-tag {
 	color: colors.$base-color-green;
+	margin-right: 0.3em;
 	@include typography.responsive-font-size(1rem, 0.75rem);
 }
 
@@ -38,7 +40,7 @@
 	flex-wrap: wrap;
 	justify-content: flex-end;
 	text-align: end;
-	margin-left: 0.3em;
+	max-width: 8.8em;
 
 	span:nth-child(odd) {
 		min-width: 48%;

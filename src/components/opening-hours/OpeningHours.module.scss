@@ -21,11 +21,11 @@
 
 .card {
 	width: 100%;
-	max-width: 22.3rem;
+	max-width: 22.5rem;
 
 	@media (max-width: breakpoints.$breakpoint-tablet) {
 		max-width: 17rem;
-		min-width: 14rem;
+		min-width: 14.7rem;
 	}
 }
 

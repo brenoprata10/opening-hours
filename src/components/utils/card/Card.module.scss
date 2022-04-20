@@ -15,7 +15,6 @@
 .header {
 	display: flex;
 	align-items: center;
-	margin-top: .3em;
 	border-bottom: 0.114rem solid colors.$base-color-black;
 	@include responsive.responsive-property('padding-bottom', .85rem, .60rem);
 
