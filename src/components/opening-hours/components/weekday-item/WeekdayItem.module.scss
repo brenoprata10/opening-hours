@@ -34,9 +34,13 @@
 
 .opening-hour {
 	white-space: nowrap;
-	width: min-content;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 	text-align: end;
 	margin-left: 0.3em;
+
+	span:nth-child(odd) {
+		min-width: 48%;
+	}
 }
