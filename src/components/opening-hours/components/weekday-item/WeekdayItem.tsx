@@ -28,8 +28,8 @@ const WeekdayItem = ({weekday, openingDayHours}: {weekday: EWeekday; openingDayH
 				<div className={styles.closed} data-testid={'closed-label'}>Closed</div>
 			) : (
 				<div className={styles['opening-hour']} data-testid={'opening-hour'}>
-					{openingDayHours.map(({type, value}) => (
-						<span key={`${weekday}-${value}`}>
+					{openingDayHours.map(({type, value}, index) => (
+						<span key={`${weekday}-${index}`}>
 							{type === EHourOperationType.CLOSE && <>&nbsp;{HOUR_SEPARATOR}&nbsp;</>}
 							{getFormattedTime(value)}
 						</span>
